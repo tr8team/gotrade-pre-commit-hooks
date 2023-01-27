@@ -71,3 +71,19 @@
   files: ^(src|tests)/.*\.(js|ts|json|jsx|tsx)$
   pass_filenames: false
   language: system
+
+# enforcers
+- id: releaser-enforce
+  name: Ensures that gitlint to conform to atomi_release.yaml
+  entry: sg gitlint
+  language: system
+  pass_filenames: false
+  files: (atomi_release.yaml|.gitlint)
+
+- id: exec-enforce
+  name: Configure Scripts
+  description: Ensure all shell scripts are executable
+  entry: chmod +x
+  language: system
+  pass_filenames: true
+  files: ^.*\.sh$

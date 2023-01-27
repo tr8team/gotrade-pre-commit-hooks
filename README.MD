@@ -226,6 +226,46 @@ Format Typescript files with `tsc --noEmit`
 | files                   | `^(src\|tests)/.*\.(js\|ts\|json\|jsx\|tsx)$` |
 | affect non-staged files | `true`                                        |
 
+## Enforcers
+
+Enforcers enforces certain properties of the repositories, such as documents are generated, files matches, scripts are in the correct permission modes etc.
+
+### releaser-enforce
+
+Enforce `sg` releaser's `atomi_release.yaml` conforms to `.gitlint`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: releaser-enforce
+```
+
+| Key                     | Value                |
+| ----------------------- | -------------------- | ---------- |
+| pre-req                 | `sg` installed       |
+| id                      | `releaser-enforce`   |
+| files                   | `(atomi_release.yaml | .gitlint)` |
+| affect non-staged files | `false`              |
+
+### exec-enforce
+
+Enforce that all Shell Scripts are executable
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: exec-enforce
+```
+
+| Key                     | Value                 |
+| ----------------------- | --------------------- |
+| pre-req                 | `coreutils` installed |
+| id                      | `exec-enforce`        |
+| files                   | `^.*\.sh$`            |
+| affect non-staged files | `false`               |
+
 # Authors
 
 - [Kirinnee](kirinnee97@gmail.com)
