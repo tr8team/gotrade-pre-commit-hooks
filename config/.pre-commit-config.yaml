@@ -12,33 +12,18 @@ repos:
   - repo: https://github.com/jumanjihouse/pre-commit-hooks
     rev: 2.1.5
     hooks:
-      - id: shfmt
       - id: shellcheck
+  - repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+    rev: v1.0.0
+    hooks:
+      - id: yamlfmt
+      - id: mdfmt
+        exclude: ^.*Changelog\.(MD|md)$
+      - id: nixfmt
+      - id: shfmt
+      - id: jsonfmt
   - repo: local
     hooks:
-      - id: yaml-fmt
-        name: Format YAML with prettier
-        entry: prettier -w
-        files: ^.*\.(yaml|yml)$
-        exclude: ^.*templates.*$
-        pass_filenames: true
-        language: system
-
-      - id: md-fmt
-        name: Format Markdown with prettier
-        entry: prettier -w
-        files: ^.*\.(MD|md)$
-        exclude: ^.*Changelog\.(MD|md)$
-        pass_filenames: true
-        language: system
-
-      - id: nixpkgs-fmt
-        name: Format NIX files
-        entry: nixpkgs-fmt
-        files: ^.*\.nix$
-        pass_filenames: true
-        language: system
-
       - id: gitlint-linter
         name: Lints Gitlint to conform to atomi_release.yaml
         entry: sg gitlint
