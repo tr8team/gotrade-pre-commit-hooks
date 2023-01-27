@@ -27,7 +27,7 @@ let
           nixpkgs-fmt
           shfmt
           shellcheck;
-
+        npm = nodePackages.npm;
         prettier = nodePackages.prettier;
       }
     );

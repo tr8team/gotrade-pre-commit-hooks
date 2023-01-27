@@ -27,6 +27,7 @@ with pkgs;
   ];
 
   release = [
+    npm
     sg
   ];
 
