@@ -1,0 +1,73 @@
+# formatters
+- id: yamlfmt
+  name: Format YAML
+  description: Formats yaml with prettier
+  language: system
+  entry: prettier -w
+  pass_filenames: true
+  files: ^.*\.(yaml|yml)$
+
+- id: mdfmt
+  name: Format Markdown
+  description: Format Markdown with prettier
+  language: system
+  entry: prettier -w
+  pass_filenames: true
+  files: ^.*\.(MD|md)$
+
+- id: nixfmt
+  name: Format NIX files
+  entry: nixpkgs-fmt
+  language: system
+  pass_filenames: true
+  files: ^.*\.nix$
+
+- id: phpfmt
+  name: Format PHP files
+  entry: php-cs-fixer fix
+  pass_filenames: false
+  language: system
+  files: ^.*\.php$
+
+- id: shfmt
+  name: Format Shell Scripts
+  entry: shfmt -w
+  pass_filenames: true
+  language: system
+  files: ^.*\.sh$
+
+- id: jsonfmt
+  name: Format JSON with prettier
+  entry: prettier -w
+  pass_filenames: true
+  language: system
+  files: ^.*\.json$
+
+# linters
+- id: dockerlint
+  name: Lint Docker files
+  entry: hadolint
+  pass_filenames: true
+  language: system
+  files: ^.*Dockerfile.*$
+
+- id: phplint
+  name: Lint PHP files
+  entry: ./vendor/bin/phpstan --memory-limit=4G analyse
+  pass_filenames: true
+  language: system
+  files: ^app/.*\.php$
+
+- id: nodelint
+  name: Lint TypeScript and JavaScript files
+  entry: eslint -c ./config/.eslintrc.js --fix
+  pass_filenames: true
+  language: system
+  files: ^(src)/.*\.(js|ts|json|jsx|tsx)$
+
+- id: tslint
+  name: Lint TypeScript
+  entry: tsc --noEmit
+  files: ^(src|tests)/.*\.(js|ts|json|jsx|tsx)$
+  pass_filenames: false
+  language: system

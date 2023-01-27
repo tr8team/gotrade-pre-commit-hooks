@@ -1,0 +1,54 @@
+repos:
+  - repo: https://github.com/jorisroovers/gitlint
+    rev: v0.15.1
+    hooks:
+      - id: gitlint
+  - repo: https://github.com/pre-commit/pre-commit-hooks
+    rev: v4.0.1
+    hooks:
+      - id: end-of-file-fixer
+      - id: trailing-whitespace
+      - id: mixed-line-ending
+  - repo: https://github.com/jumanjihouse/pre-commit-hooks
+    rev: 2.1.5
+    hooks:
+      - id: shfmt
+      - id: shellcheck
+  - repo: local
+    hooks:
+      - id: yaml-fmt
+        name: Format YAML with prettier
+        entry: prettier -w
+        files: ^.*\.(yaml|yml)$
+        exclude: ^.*templates.*$
+        pass_filenames: true
+        language: system
+
+      - id: md-fmt
+        name: Format Markdown with prettier
+        entry: prettier -w
+        files: ^.*\.(MD|md)$
+        exclude: ^.*Changelog\.(MD|md)$
+        pass_filenames: true
+        language: system
+
+      - id: nixpkgs-fmt
+        name: Format NIX files
+        entry: nixpkgs-fmt
+        files: ^.*\.nix$
+        pass_filenames: true
+        language: system
+
+      - id: gitlint-linter
+        name: Lints Gitlint to conform to atomi_release.yaml
+        entry: sg gitlint
+        files: (atomi_release.yaml|.gitlint)
+        language: system
+        pass_filenames: false
+
+      - id: exec-scripts
+        name: Configure Scripts
+        entry: chmod +x
+        files: ^.*\.sh$
+        pass_filenames: true
+        language: system

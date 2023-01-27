@@ -1,0 +1,25 @@
+version: "3"
+
+includes:
+  util: ./Taskfile.util.yml
+
+tasks:
+  default:
+    desc: Run all enforces
+    cmds:
+      - task: exec:scripts
+      - task: releaser
+
+  exec:scripts:
+    desc: Enforce that scripts are executable
+    cmds:
+      - task: util:pc
+        vars:
+          PC_ID: gitlint-linter
+
+  releaser:
+    desc: Enforce that gitlint conforms to releaser file
+    cmds:
+      - task: util:pc
+        vars:
+          PC_ID: exec-scripts

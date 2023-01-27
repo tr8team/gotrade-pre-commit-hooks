@@ -1,0 +1,16 @@
+version: "3"
+
+includes:
+  util: ./Taskfile.util.yml
+
+tasks:
+  default:
+    desc: Run all linters
+    cmds:
+      - task: sh
+  sh:
+    desc: Lints shell scripts
+    cmds:
+      - task: util:pc
+        vars:
+          PC_ID: shellcheck

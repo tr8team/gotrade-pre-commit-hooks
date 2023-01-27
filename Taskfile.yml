@@ -1,0 +1,46 @@
+version: "3"
+
+includes:
+  ci: ./scripts/Taskfile.ci.yml
+  fmt: ./scripts/Taskfile.fmt.yml
+  lint: ./scripts/Taskfile.lint.yml
+  enforce: ./scripts/Taskfile.enforce.yml
+
+tasks:
+  setup:
+    desc: Setup the repository for development
+    cmds:
+      - pre-commit install -c ./config/.pre-commit-config.yaml --install-hooks
+      - pre-commit install -c ./config/.pre-commit-config.yaml -t commit-msg
+      - precommit-nix-patch patch
+
+  update:
+    desc: Update Helm dependencies
+    dir: chart
+    cmds:
+      - helm dependency update
+
+  cfg:scripts:
+    desc: Make all scripts executable
+    cmds:
+      - chmod -R +x ./scripts
+
+  run:
+    desc: Execute the main commandline
+    cmds:
+      - ts-node main.ts {{.CLI_ARGS}}
+
+  lint:
+    desc: Run all Linters
+    cmds:
+      - task: lint:default
+
+  fmt:
+    desc: Run all Formatters
+    cmds:
+      - task: fmt:default
+
+  enforce:
+    desc: Run all Enforcers
+    cmds:
+      - task: enforce:default

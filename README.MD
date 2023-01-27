@@ -1,0 +1,231 @@
+# Gotrade PreCommit Hooks
+
+This repository contains a series of pre-commit hooks for Gotrade. This includes:
+
+- YAML formatter with `prettier`
+- Markdown Formatter with `prettier`
+- JSON Formatter with `prettier`
+- Nix formatter with `nixpkgs-fmt`
+- PHP formatter with `php-cs-fixer`
+- Shell formatter with `shfmt`
+- Docker linter with `hadolint`
+- PHP linter with `phpstan`
+- Node linter with `eslint`
+- TypeScript linter with `tsc`
+
+# Usage
+
+Here documents the assumptions and requirements on how to use the each formatters, linters and enforcers
+
+All hooks:
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: yamlfmt
+    - id: mdfmt
+    - id: nixfmt
+    - id: phpfmt
+    - id: shfmt
+    - id: jsonfmt
+    - id: dockerlint
+    - id: phplint
+    - id: nodelint
+    - id: tslint
+```
+
+## Formatters
+
+Formatters will change the styling of files without affecting code.
+
+### yamlfmt
+
+Format YAML files with `prettier`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: yamlfmt
+```
+
+| Key                     | Value                |
+| ----------------------- | -------------------- |
+| pre-req                 | `prettier` installed |
+| id                      | `yamlfmt`            |
+| files                   | `^.*\.(yaml\|yml)$`  |
+| affect non-staged files | `false`              |
+
+### mdfmt
+
+Format Markdown files with `prettier`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: mdfmt
+```
+
+| Key                     | Value                |
+| ----------------------- | -------------------- |
+| pre-req                 | `prettier` installed |
+| id                      | `mdfmt`              |
+| files                   | `^.*\.(MD\|md)$`     |
+| affect non-staged files | `false`              |
+
+### jsonfmt
+
+Format JSON files with `prettier`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: jsonfmt
+```
+
+| Key                     | Value                |
+| ----------------------- | -------------------- |
+| pre-req                 | `prettier` installed |
+| id                      | `jsonfmt`            |
+| files                   | `^.*\.json$`         |
+| affect non-staged files | `false`              |
+
+### nixfmt
+
+Format Nix files with `nixpkgs-fmt`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: nixfmt
+```
+
+| Key                     | Value                   |
+| ----------------------- | ----------------------- |
+| pre-req                 | `nixpkgs-fmt` installed |
+| id                      | `nixfmt`                |
+| files                   | `^.*\.nix$`             |
+| affect non-staged files | `false`                 |
+
+### phpfmt
+
+Format PHP files with `php-cs-fixer`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: phpfmt
+```
+
+| Key                     | Value                    |
+| ----------------------- | ------------------------ |
+| pre-req                 | `php-cs-fixer` installed |
+| id                      | `phpfmt`                 |
+| files                   | `^.*\.php$`              |
+| affect non-staged files | `true`                   |
+| configuration file path | `.php-cs-fixer.dist.php` |
+
+### shfmt
+
+Format shell scripts with `shfmt`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: shfmt
+```
+
+| Key                     | Value             |
+| ----------------------- | ----------------- |
+| pre-req                 | `shfmt` installed |
+| id                      | `shfmt`           |
+| files                   | `^.*\.sh$`        |
+| affect non-staged files | `false`           |
+
+## Linters
+
+Linters will perform static analysis on code and configuration to catch potential errors
+
+### dockerlint
+
+Format Dockerfiles with `hadolint`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: dockerlint
+```
+
+| Key                     | Value                |
+| ----------------------- | -------------------- |
+| pre-req                 | `hadolint` installed |
+| id                      | `dockerlint`         |
+| files                   | `^.*Dockerfile.*$`   |
+| affect non-staged files | `false`              |
+
+### phplint
+
+Format PHP files with `phpstan`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: phplint
+```
+
+| Key                     | Value                                         |
+| ----------------------- | --------------------------------------------- |
+| pre-req                 | `phpstan` installed at `./vendor/bin/phpstan` |
+| id                      | `phplint`                                     |
+| files                   | `^app/.*\.php$`                               |
+| affect non-staged files | `false`                                       |
+| configuration file path | `phpstan.neon`                                |
+
+### nodelint
+
+Format Node files, like Typescript and JavaScript with `eslint`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: nodelint
+```
+
+| Key                     | Value                                  |
+| ----------------------- | -------------------------------------- |
+| pre-req                 | `eslint` installed                     |
+| id                      | `nodelint`                             |
+| files                   | `^(src)/.*\.(js\|ts\|json\|jsx\|tsx)$` |
+| affect non-staged files | `false`                                |
+| configuration file path | `./config/.eslintrc.js`                |
+
+### tslint
+
+Format Typescript files with `tsc --noEmit`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: tslint
+```
+
+| Key                     | Value                                         |
+| ----------------------- | --------------------------------------------- |
+| pre-req                 | `tsc` installed                               |
+| id                      | `tslint`                                      |
+| files                   | `^(src\|tests)/.*\.(js\|ts\|json\|jsx\|tsx)$` |
+| affect non-staged files | `true`                                        |
+
+# Authors
+
+- [Kirinnee](kirinnee97@gmail.com)
