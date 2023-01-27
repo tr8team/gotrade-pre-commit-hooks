@@ -1,3 +1,15 @@
+## [1.2.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.1.0...v1.2.0) (2023-01-27)
+
+
+### Documentation Updates
+
+* fix markdown table for releaser-enforce ([66df451](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/66df4519da402ee4984163601e851a90cad12962))
+
+
+### New Features
+
+* pre-commit to use self-version for exec and releaser enforce ([08d8ffb](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/08d8ffb1c362184db6730cdc3e09e9480c5eb800))
+
 ## [1.1.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.0.0...v1.1.0) (2023-01-27)
 
 
