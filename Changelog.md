@@ -1,3 +1,11 @@
+## [1.1.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.0.0...v1.1.0) (2023-01-27)
+
+
+### New Features
+
+* added releaser enforcer and shell exec enforcer ([934fd0e](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/934fd0e3826e1967fd6953d713bcb98c09269105))
+* update formatters to use this repo's published formatters ([5b3a1f4](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/5b3a1f4095766ed33a1ccfa5a8142564687ca58d))
+
 ## 1.0.0 (2023-01-27)
 
 
