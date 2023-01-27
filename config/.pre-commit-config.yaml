@@ -14,7 +14,7 @@ repos:
     hooks:
       - id: shellcheck
   - repo: https://github.com/tr8team/gotrade-pre-commit-hooks
-    rev: v1.0.0
+    rev: v1.1.0
     hooks:
       - id: yamlfmt
       - id: mdfmt
@@ -22,18 +22,5 @@ repos:
       - id: nixfmt
       - id: shfmt
       - id: jsonfmt
-  - repo: local
-    hooks:
-      - id: gitlint-linter
-        name: Lints Gitlint to conform to atomi_release.yaml
-        entry: sg gitlint
-        files: (atomi_release.yaml|.gitlint)
-        language: system
-        pass_filenames: false
-
-      - id: exec-scripts
-        name: Configure Scripts
-        entry: chmod +x
-        files: ^.*\.sh$
-        pass_filenames: true
-        language: system
+      - id: releaser-enforce
+      - id: exec-enforce

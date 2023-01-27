@@ -241,12 +241,12 @@ Enforce `sg` releaser's `atomi_release.yaml` conforms to `.gitlint`
     - id: releaser-enforce
 ```
 
-| Key                     | Value                |
-| ----------------------- | -------------------- | ---------- |
-| pre-req                 | `sg` installed       |
-| id                      | `releaser-enforce`   |
-| files                   | `(atomi_release.yaml | .gitlint)` |
-| affect non-staged files | `false`              |
+| Key                     | Value                              |
+| ----------------------- | ---------------------------------- |
+| pre-req                 | `sg` installed                     |
+| id                      | `releaser-enforce`                 |
+| files                   | `(atomi_release.yaml \| .gitlint)` |
+| affect non-staged files | `false`                            |
 
 ### exec-enforce
 
