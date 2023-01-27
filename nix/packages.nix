@@ -26,8 +26,10 @@ let
           gitlint
           nixpkgs-fmt
           shfmt
+          nodejs
           shellcheck;
         npm = nodePackages.npm;
+
         prettier = nodePackages.prettier;
       }
     );
