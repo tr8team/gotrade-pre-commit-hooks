@@ -2,16 +2,26 @@
 
 This repository contains a series of pre-commit hooks for Gotrade. This includes:
 
-- YAML formatter with `prettier`
-- Markdown Formatter with `prettier`
-- JSON Formatter with `prettier`
-- Nix formatter with `nixpkgs-fmt`
-- PHP formatter with `php-cs-fixer`
-- Shell formatter with `shfmt`
-- Docker linter with `hadolint`
-- PHP linter with `phpstan`
-- Node linter with `eslint`
-- TypeScript linter with `tsc`
+### Formatter
+
+- [YAML formatter with `prettier`](#yamlfmt)
+- [Markdown Formatter with `prettier`](#mdfmt)
+- [JSON Formatter with `prettier`](#jsonfmt)
+- [Nix formatter with `nixpkgs-fmt`](#nixfmt)
+- [PHP formatter with `php-cs-fixer`](#phpfmt)
+- [Shell formatter with `shfmt`](#shfmt)
+
+### Linters
+
+- [Docker linter with `hadolint`](#dockerlint)
+- [PHP linter with `phpstan`](#phplint)
+- [Node linter with `eslint`](#nodelint)
+- [TypeScript linter with `tsc`](#tslint)
+
+### Enforcers
+
+- [Enforce `sg` releaser's `atomi_release.yaml` conforms to `.gitlint`](#releaser-enforce)
+- [Enforce that all Shell Scripts are executable](#exec-enforce)
 
 # Usage
 
@@ -33,6 +43,8 @@ All hooks:
     - id: phplint
     - id: nodelint
     - id: tslint
+    - id: exec-enforce
+    - id: releaser-enforce
 ```
 
 ## Formatters
