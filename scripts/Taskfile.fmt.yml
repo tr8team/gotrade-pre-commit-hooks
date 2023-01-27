@@ -11,6 +11,7 @@ tasks:
       - task: md
       - task: yaml
       - task: nix
+      - task: json
       - task: eof
       - task: whitespace
       - task: clrf
@@ -47,17 +48,23 @@ tasks:
     cmds:
       - task: util:pc
         vars:
-          PC_ID: md-fmt
+          PC_ID: mdfmt
 
   yaml:
     desc: Formats YAML with prettier
     cmds:
       - task: util:pc
         vars:
-          PC_ID: yaml-fmt
+          PC_ID: yamlfmt
   nix:
     desc: Formats Nix files
     cmds:
       - task: util:pc
         vars:
-          PC_ID: nixpkgs-fmt
+          PC_ID: nixpkgsfmt
+  json:
+    desc: Formats JSON files
+    cmds:
+      - task: util:pc
+        vars:
+          PC_ID: jsonfmt
