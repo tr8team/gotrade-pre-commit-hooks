@@ -1,3 +1,15 @@
+## [1.3.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.2.0...v1.3.0) (2023-02-24)
+
+
+### Documentation Updates
+
+* exec and releaser enforcement hooks ([e817f53](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/e817f53e59a97a2e1057438dafc4168da404e08b))
+
+
+### New Features
+
+* change eslint to use mjs ([ac53862](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/ac5386223884184a1fa078e83c4a0b480bd08d79))
+
 ## [1.2.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.1.0...v1.2.0) (2023-01-27)
 
 
