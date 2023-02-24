@@ -218,7 +218,7 @@ Format Node files, like Typescript and JavaScript with `eslint`
 | id                      | `nodelint`                                           |
 | files                   | `^(src)/.*\.((c\|m)?js\|(c\|m)?ts\|json\|jsx\|tsx)$` |
 | affect non-staged files | `false`                                              |
-| configuration file path | `./config/.eslintrc.mjs`                             |
+| configuration file path | `./config/.eslintrc.cjs`                             |
 
 ### tslint
 
