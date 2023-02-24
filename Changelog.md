@@ -1,3 +1,10 @@
+## [1.3.1](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.3.0...v1.3.1) (2023-02-24)
+
+
+### Bug Fixes
+
+* use cjs ([1ca9db6](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/1ca9db61eb00b97227b323d235e33276ce6ed282))
+
 ## [1.3.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.2.0...v1.3.0) (2023-02-24)
 
 
