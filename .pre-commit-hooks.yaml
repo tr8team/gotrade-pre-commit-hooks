@@ -60,10 +60,10 @@
 
 - id: nodelint
   name: Lint TypeScript and JavaScript files
-  entry: eslint -c ./config/.eslintrc.cjs --fix
+  entry: eslint -c ./config/.eslintrc.json --fix
   pass_filenames: true
   language: system
-  files: ^(src)/.*\.((m|c)?js|(m|c)?ts|json|jsx|tsx)$
+  files: ^(src)/.*\.([mc]?js|[mc]?ts|json|jsx|tsx)$
 
 - id: tslint
   name: Lint TypeScript

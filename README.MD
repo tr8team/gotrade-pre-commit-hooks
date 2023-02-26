@@ -212,13 +212,13 @@ Format Node files, like Typescript and JavaScript with `eslint`
     - id: nodelint
 ```
 
-| Key                     | Value                                                |
-| ----------------------- | ---------------------------------------------------- |
-| pre-req                 | `eslint` installed                                   |
-| id                      | `nodelint`                                           |
-| files                   | `^(src)/.*\.((c\|m)?js\|(c\|m)?ts\|json\|jsx\|tsx)$` |
-| affect non-staged files | `false`                                              |
-| configuration file path | `./config/.eslintrc.cjs`                             |
+| Key                     | Value                                            |
+| ----------------------- | ------------------------------------------------ |
+| pre-req                 | `eslint` installed                               |
+| id                      | `nodelint`                                       |
+| files                   | `^(src)/.*\.([mc]?js\|[mc]?ts\|json\|jsx\|tsx)$` |
+| affect non-staged files | `false`                                          |
+| configuration file path | `./config/.eslintrc.json`                        |
 
 ### tslint
 
