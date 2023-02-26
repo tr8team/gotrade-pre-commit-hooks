@@ -1,3 +1,10 @@
+## [1.3.2](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.3.1...v1.3.2) (2023-02-26)
+
+
+### Bug Fixes
+
+* defaults nodelint to eslintrc.json ([81b57ba](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/81b57ba44598b310e3f55f9e0f5fade6feb10229))
+
 ## [1.3.1](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.3.0...v1.3.1) (2023-02-24)
 
 
