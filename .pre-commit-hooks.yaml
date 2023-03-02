@@ -87,3 +87,11 @@
   language: system
   pass_filenames: true
   files: ^.*\.sh$
+
+- id: action-docs-enforce
+  name: Configure Scripts
+  description: Ensure actions documents are generated
+  entry: action-docs --no-banner -u
+  language: system
+  pass_filenames: false
+  files: ^.*action\.(yaml|yml)$

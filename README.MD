@@ -22,6 +22,7 @@ This repository contains a series of pre-commit hooks for Gotrade. This includes
 
 - [Enforce `sg` releaser's `atomi_release.yaml` conforms to `.gitlint`](#releaser-enforce)
 - [Enforce that all Shell Scripts are executable](#exec-enforce)
+- [Enforce that `action.yaml` for Gtihub Action generates documentation](#action-docs-enforce)
 
 # Usage
 
@@ -45,6 +46,7 @@ All hooks:
     - id: tslint
     - id: exec-enforce
     - id: releaser-enforce
+    - id: action-docs-enforce
 ```
 
 ## Formatters
@@ -277,6 +279,25 @@ Enforce that all Shell Scripts are executable
 | id                      | `exec-enforce`        |
 | files                   | `^.*\.sh$`            |
 | affect non-staged files | `false`               |
+
+### action-docs-enforce
+
+Enforce that `action.yaml` for GitHub action are documented in
+`README.MD`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: action-docs-enforce
+```
+
+| Key                     | Value                     |
+| ----------------------- | ------------------------- |
+| pre-req                 | `action-docs` installed   |
+| id                      | `action-docs-enforce`     |
+| files                   | `^.*action\.(yaml\|yml)$` |
+| affect non-staged files | `true`                    |
 
 # Authors
 
