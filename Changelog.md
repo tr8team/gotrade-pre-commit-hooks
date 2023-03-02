@@ -1,3 +1,10 @@
+## [1.4.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.3.2...v1.4.0) (2023-03-02)
+
+
+### New Features
+
+* action-docs-enforce ([797f57d](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/797f57de264cd40d40a7e502ce39874b00748c76))
+
 ## [1.3.2](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.3.1...v1.3.2) (2023-02-26)
 
 
