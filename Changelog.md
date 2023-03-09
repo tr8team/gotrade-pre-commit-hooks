@@ -1,3 +1,10 @@
+## [1.5.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.4.0...v1.5.0) (2023-03-09)
+
+
+### New Features
+
+* nodefmt for formatting Typescript and Javascript files ([dbd60d3](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/dbd60d355d6e8482f9b62b31801d5a247123353c))
+
 ## [1.4.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.3.2...v1.4.0) (2023-03-02)
 
 
