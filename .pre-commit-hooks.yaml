@@ -7,6 +7,14 @@
   pass_filenames: true
   files: ^.*\.(yaml|yml)$
 
+- id: nodefmt
+  name: Format YAML
+  description: Formats yaml with prettier
+  language: system
+  entry: prettier -w
+  pass_filenames: true
+  files: ^.*\.([mc]?[tj]?sx?)$
+
 - id: mdfmt
   name: Format Markdown
   description: Format Markdown with prettier

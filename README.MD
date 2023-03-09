@@ -7,6 +7,7 @@ This repository contains a series of pre-commit hooks for Gotrade. This includes
 - [YAML formatter with `prettier`](#yamlfmt)
 - [Markdown Formatter with `prettier`](#mdfmt)
 - [JSON Formatter with `prettier`](#jsonfmt)
+- [Node Formatter with `prettier`](#nodefmt)
 - [Nix formatter with `nixpkgs-fmt`](#nixfmt)
 - [PHP formatter with `php-cs-fixer`](#phpfmt)
 - [Shell formatter with `shfmt`](#shfmt)
@@ -70,6 +71,24 @@ Format YAML files with `prettier`
 | id                      | `yamlfmt`            |
 | files                   | `^.*\.(yaml\|yml)$`  |
 | affect non-staged files | `false`              |
+
+### nodefmt
+
+Format Typescript and Javascript files with `prettier`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: nodefmt
+```
+
+| Key                     | Value                   |
+| ----------------------- | ----------------------- |
+| pre-req                 | `prettier` installed    |
+| id                      | `nodefmt`               |
+| files                   | `^.*\.([mc]?[tj]?sx?)$` |
+| affect non-staged files | `false`                 |
 
 ### mdfmt
 
