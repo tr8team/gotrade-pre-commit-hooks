@@ -1,3 +1,10 @@
+## [1.6.1](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.6.0...v1.6.1) (2023-05-14)
+
+
+### Bug Fixes
+
+* dotnet hooks missing dotnet commands in entry ([f5b7a0e](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/f5b7a0e25730019a7560566395a3103881e06d8d))
+
 ## [1.6.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.5.0...v1.6.0) (2023-05-14)
 
 
