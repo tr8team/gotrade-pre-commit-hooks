@@ -4,6 +4,7 @@ This repository contains a series of pre-commit hooks for Gotrade. This includes
 
 ### Formatter
 
+- [.NET formatter with `dotnet`](#dotnetfmt)
 - [YAML formatter with `prettier`](#yamlfmt)
 - [Markdown Formatter with `prettier`](#mdfmt)
 - [JSON Formatter with `prettier`](#jsonfmt)
@@ -14,6 +15,7 @@ This repository contains a series of pre-commit hooks for Gotrade. This includes
 
 ### Linters
 
+- [.NET linter with `dotnet`](#dotnetlint)
 - [Docker linter with `hadolint`](#dockerlint)
 - [PHP linter with `phpstan`](#phplint)
 - [Node linter with `eslint`](#nodelint)
@@ -35,12 +37,14 @@ All hooks:
 - repo: https://github.com/tr8team/gotrade-pre-commit-hooks
   rev: main
   hooks:
+    - id: dotnetfmt
     - id: yamlfmt
     - id: mdfmt
     - id: nixfmt
     - id: phpfmt
     - id: shfmt
     - id: jsonfmt
+    - id: dotnetlint
     - id: dockerlint
     - id: phplint
     - id: nodelint
@@ -53,6 +57,24 @@ All hooks:
 ## Formatters
 
 Formatters will change the styling of files without affecting code.
+
+### dotnetfmt
+
+Formats .NET files with `dotnet format`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: dotnetfmt
+```
+
+| Key                     | Value              |
+| ----------------------- | ------------------ |
+| pre-req                 | `dotnet` installed |
+| id                      | `dotnetfmt`        |
+| files                   | `^.*\.cs$`         |
+| affect non-staged files | `false`            |
 
 ### yamlfmt
 
@@ -184,6 +206,24 @@ Format shell scripts with `shfmt`
 ## Linters
 
 Linters will perform static analysis on code and configuration to catch potential errors
+
+### dotnetlint
+
+Lint .NET files with `dotnet format`
+
+```yaml
+- repo: https://github.com/tr8team/gotrade-pre-commit-hooks
+  rev: main
+  hooks:
+    - id: dotnetlint
+```
+
+| Key                     | Value              |
+| ----------------------- | ------------------ |
+| pre-req                 | `dotnet` installed |
+| id                      | `dotnetlint`       |
+| files                   | `^.*\.cs$`         |
+| affect non-staged files | `false`            |
 
 ### dockerlint
 
