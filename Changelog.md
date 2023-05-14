@@ -1,3 +1,10 @@
+## [1.6.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.5.0...v1.6.0) (2023-05-14)
+
+
+### New Features
+
+* dotnet linter and formatter ([7b81307](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/7b81307a149930e8f0a769e57093b73b23d5b7e0))
+
 ## [1.5.0](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.4.0...v1.5.0) (2023-03-09)
 
 
