@@ -74,7 +74,7 @@ Formats .NET files with `dotnet format`
 | pre-req                 | `dotnet` installed |
 | id                      | `dotnetfmt`        |
 | files                   | `^.*\.cs$`         |
-| affect non-staged files | `false`            |
+| affect non-staged files | `true`             |
 
 ### yamlfmt
 
@@ -223,7 +223,7 @@ Lint .NET files with `dotnet format`
 | pre-req                 | `dotnet` installed |
 | id                      | `dotnetlint`       |
 | files                   | `^.*\.cs$`         |
-| affect non-staged files | `false`            |
+| affect non-staged files | `true`             |
 
 ### dockerlint
 

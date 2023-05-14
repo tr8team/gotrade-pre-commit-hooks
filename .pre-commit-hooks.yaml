@@ -12,7 +12,7 @@
   description: Format whitespace for .NET
   language: system
   entry: dotnet format whitespace --no-restore -v d
-  pass_filenames: true
+  pass_filenames: false
   files: ^.*\.cs$
 
 - id: nodefmt
@@ -63,7 +63,7 @@
 - id: dotnetlint
   name: Lints .NET Project
   entry: dotnet format style --no-restore --severity info --verify-no-changes -v d
-  pass_filenames: true
+  pass_filenames: false
   language: system
   files: ^.*\.cs$
 
