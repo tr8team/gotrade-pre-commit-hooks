@@ -1,3 +1,10 @@
+## [1.6.2](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.6.1...v1.6.2) (2023-05-14)
+
+
+### Bug Fixes
+
+* remove passfile name due to lack of support ([22632e7](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/22632e731741fbfba35b03b4cab73b97db4308e1))
+
 ## [1.6.1](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.6.0...v1.6.1) (2023-05-14)
 
 
