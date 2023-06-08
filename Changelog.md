@@ -1,3 +1,10 @@
+## [1.6.3](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.6.2...v1.6.3) (2023-06-08)
+
+
+### Bug Fixes
+
+* incorrect precommit for node message ([888f15a](https://github.com/tr8team/gotrade-pre-commit-hooks/commit/888f15aaa9adf566b890112bb5b7993fca35b09e))
+
 ## [1.6.2](https://github.com/tr8team/gotrade-pre-commit-hooks/compare/v1.6.1...v1.6.2) (2023-05-14)
 
 
