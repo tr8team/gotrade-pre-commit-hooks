@@ -16,8 +16,8 @@
   files: ^.*\.cs$
 
 - id: nodefmt
-  name: Format YAML
-  description: Formats yaml with prettier
+  name: Format Node files
+  description: Formats Node files with prettier
   language: system
   entry: prettier -w
   pass_filenames: true
